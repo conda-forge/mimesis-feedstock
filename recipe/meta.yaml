@@ -1,17 +1,17 @@
 {% set name = "mimesis" %}
-{% set version = "4.0.0" %}
+{% set version = "4.1.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: d59ca48d4118d391704a525cef4e33fa219f3d9c4f9a95b7ec2a0e0c88e048a4
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 0f217774ea46cf486fc1f7cd443279487a1a875e292a147259f00ef54d745c48
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
@@ -30,13 +30,13 @@ test:
     - mimesis.providers
 
 about:
-  home: "https://github.com/lk-geimfari/mimesis"
+  home: https://github.com/lk-geimfari/mimesis
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: "Mimesis: fake data generator."
-  doc_url: "https://mimesis.readthedocs.io/"
-  dev_url: "https://github.com/lk-geimfari/mimesis"
+  summary: 'Mimesis: fake data generator.'
+  doc_url: https://mimesis.readthedocs.io/
+  dev_url: https://github.com/lk-geimfari/mimesis
 
 extra:
   recipe-maintainers:
