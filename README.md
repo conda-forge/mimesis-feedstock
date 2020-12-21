@@ -5,11 +5,13 @@ Home: https://github.com/lk-geimfari/mimesis
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mimesis-feedstock/blob/master/LICENSE.txt)
 
 Summary: Mimesis: fake data generator.
 
+Development: https://github.com/lk-geimfari/mimesis
 
+Documentation: https://mimesis.readthedocs.io/
 
 Current build status
 ====================
