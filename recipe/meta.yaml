@@ -10,17 +10,17 @@ source:
   sha256: ba31b3b220d1abd760fa268fe7ac79a9bc8438977f9896ddd4375fe2fff07844
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.10
     - poetry
   run:
-    - python >=3.6
+    - python >=3.10
 
 test:
   imports:
@@ -29,6 +29,10 @@ test:
     - mimesis.data
     - mimesis.data.int
     - mimesis.providers
+  commands:
+    - pip check
+  requires:
+    - pip    
 
 about:
   home: https://github.com/lk-geimfari/mimesis
