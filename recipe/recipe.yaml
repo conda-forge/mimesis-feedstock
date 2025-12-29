@@ -21,7 +21,7 @@ requirements:
   host:
     - pip
     - python ${{ python_min }}.*
-    - poetry
+    - hatchling
   run:
     - python >=${{ python_min }}
 
@@ -29,7 +29,6 @@ tests:
   - python:
       imports:
         - mimesis
-        - mimesis.builtins
         - mimesis.providers
       python_version: ${{ python_min }}.*
 about:
