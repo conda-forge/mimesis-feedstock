@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: mimesis
-  version: 18.0.0
+  version: "19.0.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 7d7c76ecd680ae48afe8dc4413ef1ef1ee7ef20e16f9f9cb42892add642fc1b2
+  sha256: 63506622966a377757118408157e9c6f8f6ae1745a978207f6db516bb48c021c
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
 
@@ -21,7 +21,7 @@ requirements:
   host:
     - pip
     - python ${{ python_min }}.*
-    - poetry
+    - hatchling
   run:
     - python >=${{ python_min }}
 
@@ -29,7 +29,6 @@ tests:
   - python:
       imports:
         - mimesis
-        - mimesis.builtins
         - mimesis.providers
       python_version: ${{ python_min }}.*
 about:
