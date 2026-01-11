@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: mimesis
-  version: "19.0.0"
+  version: "19.1.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 63506622966a377757118408157e9c6f8f6ae1745a978207f6db516bb48c021c
+  sha256: af4f14852a97657c5dbfad860be90c0efe97bf3758809e034b6581a45b13814b
 
 build:
   number: 0
