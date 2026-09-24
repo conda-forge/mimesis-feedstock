@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: mimesis
-  version: "21.0.0"
+  version: 22.2.0
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: e3470d257cb49b7933fd9ed94e06aba22593274a2767dc1848f8b12423ffbd87
+  sha256: 7cd7d9dadd226129fd8bc6039fb0ff9b58efb2b4001022357f69381208e1df68
 
 build:
   number: 0
@@ -24,8 +24,6 @@ requirements:
     - hatchling
   run:
     - python >=${{ python_min }}
-    - typing_extensions
-
 tests:
   - python:
       imports:
@@ -33,7 +31,7 @@ tests:
         - mimesis.providers
       python_version:
         - ${{ python_min }}.*
-        - "*"
+        - '*'
 about:
   license: MIT
   license_file: LICENSE
